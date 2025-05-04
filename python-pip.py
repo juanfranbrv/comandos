@@ -59,12 +59,12 @@ def create_project(name):
         
         # Crear archivo requirements.txt vacío
         requirements_path = project_path / "requirements.txt"
-        with open(requirements_path, "w") as f:
+        with open(requirements_path, "w", encoding="utf-8") as f:
             f.write("# Dependencias del proyecto\n")
         
         # Crear archivo main.py básico
         main_path = project_path / "main.py"
-        with open(main_path, "w") as f:
+        with open(main_path, "w", encoding="utf-8") as f:
             f.write('"""Punto de entrada principal de la aplicación."""\n\n')
             f.write('def main():\n')
             f.write('    """Función principal."""\n')
@@ -168,7 +168,7 @@ def add_dependencies(project_path):
         
         # Actualizar requirements.txt
         requirements_path = project_path / "requirements.txt"
-        with open(requirements_path, "w") as f:
+        with open(requirements_path, "w", encoding="utf-8") as f:
             f.write("# Dependencias del proyecto\n")
             for pkg in packages:
                 f.write(f"{pkg}\n")

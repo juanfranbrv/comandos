@@ -59,7 +59,7 @@ def create_project(name):
         
         # Crear archivo requirements.txt con Streamlit
         requirements_path = project_path / "requirements.txt"
-        with open(requirements_path, "w") as f:
+        with open(requirements_path, "w", encoding="utf-8") as f:
             f.write("# Dependencias del proyecto\n")
             f.write("streamlit>=1.30.0\n")
         
@@ -175,10 +175,10 @@ def add_dependencies(project_path):
         
         # Actualizar requirements.txt manteniendo streamlit
         requirements_path = project_path / "requirements.txt"
-        with open(requirements_path, "r") as f:
+        with open(requirements_path, "r", encoding="utf-8") as f:
             lines = f.readlines()
         
-        with open(requirements_path, "w") as f:
+        with open(requirements_path, "w", encoding="utf-8") as f:
             for line in lines:
                 f.write(line)
             for pkg in packages:
@@ -251,7 +251,7 @@ else:
 
 # Pie de página
 st.divider()
-st.caption("Creado con Streamlit y venv 🚀")
+st.caption("Creado con Streamlit y pip 🚀")
 """
     
     app_path = project_path / "app.py"

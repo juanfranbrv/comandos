@@ -356,7 +356,7 @@ venv/
 uv.lock
 
 # Streamlit
-.streamlit/secrets.toml
+.streamlit/credentials.toml
 
 # IDEs
 .vscode/
@@ -375,7 +375,7 @@ dist/
 *.egg-info/
 """
             gitignore_path = project_path / ".gitignore"
-            with open(gitignore_path, "w") as f:
+            with open(gitignore_path, "w", encoding="utf-8") as f:
                 f.write(gitignore_content)
             console.print("[green]✓[/green] Repositorio Git inicializado")
         except subprocess.CalledProcessError:
