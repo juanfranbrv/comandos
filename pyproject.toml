@@ -1,0 +1,12 @@
+[project]
+name = "py-project-init"
+version = "0.1.0"
+description = "Creador de Proyectos Python con UV"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "rich>=14.0.0",
+]
+
+
+
